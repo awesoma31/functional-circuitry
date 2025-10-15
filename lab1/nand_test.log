@@ -1,0 +1,42 @@
+LTspice 24.1.9 for Windows
+Circuit: C:\Users\gwert\_itmo\схемотехника\lab1\nand_test.net
+Start Time: Tue Oct 14 11:43:14 2025
+Options: ALLOW_AMBIGUOUS_MODELS
+C:\Users\gwert\_itmo\схемотехника\lab1\nand_test.net(12): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M1 N004 B 0 N005 NMOS l=90n w=200n
+                 ^^^^
+C:\Users\gwert\_itmo\схемотехника\lab1\nand_test.net(13): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M2 Y A N004 N003 NMOS l=90n w=200n
+                 ^^^^
+C:\Users\gwert\_itmo\схемотехника\lab1\nand_test.net(14): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M3 VDD A Y N002 PMOS l=90n w=400n
+                ^^^^
+C:\Users\gwert\_itmo\схемотехника\lab1\nand_test.net(15): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M4 VDD B Y N001 PMOS l=90n w=400n
+                ^^^^
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 27
+method = trap
+WARNING: Node x1:n005 is floating.
+WARNING: Node x1:n003 is floating.
+WARNING: Node x1:n002 is floating.
+WARNING: Node x1:n001 is floating.
+
+Instance "x1:M1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x1:M1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x1:M2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x1:M2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x1:M3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x1:M3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x1:M4": Length shorter than recommended for a level 1 MOSFET.
+Instance "x1:M4": Width narrower than recommended for a level 1 MOSFET.
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 0.249 seconds.
+
+Files loaded:
+C:\Users\gwert\_itmo\схемотехника\lab1\nand_test.net
+C:\Users\gwert\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\Users\gwert\_itmo\схемотехника\lab1\90nm_bulk.txt
+

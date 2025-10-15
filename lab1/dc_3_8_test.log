@@ -1,0 +1,114 @@
+LTspice 24.1.9 for Windows
+Circuit: C:\Users\gwert\_itmo\схемотехника\lab1\dc_3_8_test.net
+Start Time: Wed Oct 15 13:35:16 2025
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 27
+method = trap
+WARNING: Node x1:x1:x1:n002 is floating.
+WARNING: Node x1:x1:x1:n001 is floating.
+WARNING: Node x1:x4:x1:n002 is floating.
+WARNING: Node x1:x4:x1:n001 is floating.
+WARNING: Node x1:x4:x4:n002 is floating.
+WARNING: Node x1:x4:x4:n001 is floating.
+WARNING: Node x1:x4:x2:n002 is floating.
+WARNING: Node x1:x4:x2:n001 is floating.
+WARNING: Node x1:x5:x1:n002 is floating.
+WARNING: Node x1:x5:x1:n001 is floating.
+WARNING: Node x1:x5:x4:n002 is floating.
+WARNING: Node x1:x5:x4:n001 is floating.
+WARNING: Node x1:x5:x2:n002 is floating.
+WARNING: Node x1:x5:x2:n001 is floating.
+WARNING: Node x1:x6:x1:n002 is floating.
+WARNING: Node x1:x6:x1:n001 is floating.
+WARNING: Node x1:x6:x4:n002 is floating.
+WARNING: Node x1:x6:x4:n001 is floating.
+WARNING: Node x1:x6:x2:n002 is floating.
+WARNING: Node x1:x6:x2:n001 is floating.
+WARNING: Node x1:x7:x1:n002 is floating.
+WARNING: Node x1:x7:x1:n001 is floating.
+WARNING: Node x1:x7:x4:n002 is floating.
+WARNING: Node x1:x7:x4:n001 is floating.
+WARNING: Node x1:x7:x2:n002 is floating.
+WARNING: Node x1:x7:x2:n001 is floating.
+WARNING: Node x1:x8:x1:n002 is floating.
+WARNING: Node x1:x8:x1:n001 is floating.
+WARNING: Node x1:x8:x4:n002 is floating.
+WARNING: Node x1:x8:x4:n001 is floating.
+WARNING: Node x1:x8:x2:n002 is floating.
+WARNING: Node x1:x8:x2:n001 is floating.
+WARNING: Node x1:x9:x1:n002 is floating.
+WARNING: Node x1:x9:x1:n001 is floating.
+WARNING: Node x1:x9:x4:n002 is floating.
+WARNING: Node x1:x9:x4:n001 is floating.
+WARNING: Node x1:x9:x2:n002 is floating.
+WARNING: Node x1:x9:x2:n001 is floating.
+WARNING: Node x1:x11:x1:n002 is floating.
+WARNING: Node x1:x11:x1:n001 is floating.
+WARNING: Node x1:x11:x4:n002 is floating.
+WARNING: Node x1:x11:x4:n001 is floating.
+WARNING: Node x1:x11:x2:n002 is floating.
+WARNING: Node x1:x11:x2:n001 is floating.
+WARNING: Node x1:x12:x1:n002 is floating.
+WARNING: Node x1:x12:x1:n001 is floating.
+WARNING: Node x1:x14:x1:n002 is floating.
+WARNING: Node x1:x14:x1:n001 is floating.
+WARNING: Node x1:x15:x1:n002 is floating.
+WARNING: Node x1:x15:x1:n001 is floating.
+WARNING: Node x1:x17:x1:n002 is floating.
+WARNING: Node x1:x17:x1:n001 is floating.
+WARNING: Node x1:x18:x1:n002 is floating.
+WARNING: Node x1:x18:x1:n001 is floating.
+WARNING: Node x1:x2:x1:n002 is floating.
+WARNING: Node x1:x2:x1:n001 is floating.
+WARNING: Node x1:x3:x1:n002 is floating.
+WARNING: Node x1:x3:x1:n001 is floating.
+WARNING: Node x1:x10:x1:n002 is floating.
+WARNING: Node x1:x10:x1:n001 is floating.
+WARNING: Node x1:x10:x4:n002 is floating.
+WARNING: Node x1:x10:x4:n001 is floating.
+WARNING: Node x1:x10:x2:n002 is floating.
+WARNING: Node x1:x10:x2:n001 is floating.
+WARNING: Node x1:x13:x1:n002 is floating.
+WARNING: Node x1:x13:x1:n001 is floating.
+WARNING: Node x1:x19:x1:n002 is floating.
+WARNING: Node x1:x19:x1:n001 is floating.
+WARNING: Node x1:x20:x1:n002 is floating.
+WARNING: Node x1:x20:x1:n001 is floating.
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-05
+Gmin = 1.6455e-06
+Gmin = 1.76685e-07
+Gmin = 1.89714e-08
+Gmin = 2.03704e-09
+Gmin = 2.18725e-10
+Gmin = 2.34854e-11
+Gmin = 2.52173e-12
+Gmin = 2.70769e-13
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 18.085 seconds.
+
+Files loaded:
+C:\Users\gwert\_itmo\схемотехника\lab1\dc_3_8_test.net
+C:\Users\gwert\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\Users\gwert\_itmo\схемотехника\lab1\90nm_bulk.txt
+
+t_in_r: V(A)={0.2} AT 1.70020000001e-08
+t_out_f: V(n001)={0.1} AT 1.71920031594e-08
+t_10: 't_out_f - t_in_r'=1.90003159357e-10
+f_10: '1 / t_10'=5263070379.38
+t_in_f: V(A)={0.8} AT 1.50120000002e-08
+t_out_r: V(N001)={0.9} AT 1.51056091187e-08
+t_01: 't_out_r - t_in_f'=9.36091184478e-11
+f_01: '1 / t_01'=10682719980.5
