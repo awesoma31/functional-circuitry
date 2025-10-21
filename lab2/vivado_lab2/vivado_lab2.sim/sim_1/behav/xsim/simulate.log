@@ -1,0 +1,15 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+[OK] ? SMALL: y=39  LAT = 33 cycles  (~330 ns)
+[OK] ? MAX: y=16646400  LAT = 33 cycles  (~330 ns)
+[OK] ? T0: y=0  LAT = 33 cycles  (~330 ns)
+[OK] ? T1: y=1  LAT = 33 cycles  (~330 ns)
+[OK] ? T2: y=0  LAT = 33 cycles  (~330 ns)
+[OK] ? T3: y=378  LAT = 33 cycles  (~330 ns)
+[OK] ? T4: y=1100  LAT = 33 cycles  (~330 ns)
+[OK] ? T5: y=3405  LAT = 33 cycles  (~330 ns)
+[OK] ? T6: y=51356  LAT = 33 cycles  (~330 ns)
+[OK] ? T7: y=2097280  LAT = 33 cycles  (~330 ns)
+[OK] ? T8: y=8010600  LAT = 33 cycles  (~330 ns)
+[OK] ? T9: y=16581375  LAT = 33 cycles  (~330 ns)
+$finish called at time : 4245 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 77

@@ -1,0 +1,138 @@
+<mxfile host="app.diagrams.net" modified="2025-10-21T09:00:00.000Z" agent="chatgpt" version="22.0.3">
+  <diagram id="ab-plus-a3" name="Page-1">
+    <mxGraphModel dx="1460" dy="880" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Inputs -->
+        <mxCell id="a_in" value="a[7:0]" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="140" width="80" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_in" value="b[7:0]" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="220" width="80" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="start_in" value="start" style="shape=ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="40" width="70" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Registers A,B -->
+        <mxCell id="regA" value="RegA[8]" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="180" y="140" width="100" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="regB" value="RegB[8]" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="180" y="220" width="100" height="36" as="geometry"/>
+        </mxCell>
+
+        <!-- ZExtA -->
+        <mxCell id="zextA" value="ZExtA[15:0] &lt;-- {8'b0, a}" style="shape=process;whiteSpace=wrap;html=1;align=center;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="320" y="140" width="160" height="36" as="geometry"/>
+        </mxCell>
+
+        <!-- RegA2 -->
+        <mxCell id="regA2" value="RegA2[15:0]  &lt;-- m_Y[15:0] (ld_A2)" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="320" y="260" width="200" height="36" as="geometry"/>
+        </mxCell>
+
+        <!-- MUX A16 -->
+        <mxCell id="muxA16" value="MUX_A16 (selA16)&#10;0: ZExtA[16]&#10;1: RegA2[16]" style="shape=triangle;direction=west;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450" vertex="1" parent="1">
+          <mxGeometry x="540" y="150" width="80" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- MUX B8 -->
+        <mxCell id="muxB8" value="MUX_B8 (selB8)&#10;0: RegB[8]&#10;1: RegA[8]" style="shape=triangle;direction=west;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450" vertex="1" parent="1">
+          <mxGeometry x="540" y="250" width="80" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Multiplier -->
+        <mxCell id="mul" value="UMNOZ_16x8 (последовательный)&#10;Внутри: Reg_Aext[24], Reg_B[8], ACC[24],&#10;Cnt[3:0], ADD24, &laquo;&lt;&lt;1/&gt;&gt;1&raquo;&#10;I/O: A16, B8 -&gt; m_Y[23:0], mul_done" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="660" y="170" width="240" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- RegAB / RegA3 -->
+        <mxCell id="regAB" value="RegAB[23:0] &lt;-- m_Y (ld_AB)" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="930" y="120" width="200" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="regA3" value="RegA3[23:0] &lt;-- m_Y (ld_A3)" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="930" y="240" width="200" height="36" as="geometry"/>
+        </mxCell>
+
+        <!-- ADD_OUT -->
+        <mxCell id="add_out" value="ADD_OUT 24b&#10;Ytmp = RegAB + RegA3" style="shape=plus;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="1170" y="180" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- RegY / outputs -->
+        <mxCell id="regY" value="RegY[23:0] (ld_Y)" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="1260" y="180" width="140" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="y_out" value="y[23:0], valid" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="180" width="120" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="busy_out" value="busy" style="shape=ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="60" width="70" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- FSM -->
+        <mxCell id="fsm" value="FSM (IDLE→MUL_AB→MUL_A2→MUL_A3→ADD→DONE)&#10;Управление: selA16, selB8, start_mul, ld_AB, ld_A2, ld_A3, ld_Y, valid&#10;Входы: start, mul_done" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="930" y="20" width="360" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges: inputs -> regs -->
+        <mxCell id="e_a_regA" edge="1" parent="1" source="a_in" target="regA" style="endArrow=block;endFill=1;"/>
+        <mxCell id="e_b_regB" edge="1" parent="1" source="b_in" target="regB" style="endArrow=block;endFill=1;"/>
+
+        <!-- RegA -> ZExtA -->
+        <mxCell id="e_regA_zext" edge="1" parent="1" source="regA" target="zextA" style="endArrow=block;endFill=1;"/>
+        <!-- RegA -> MUX_B8 (input 1) -->
+        <mxCell id="e_regA_muxB" edge="1" parent="1" source="regA" target="muxB8" style="endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="520" y="170"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- RegB -> MUX_B8 (input 0) -->
+        <mxCell id="e_regB_muxB" edge="1" parent="1" source="regB" target="muxB8" style="endArrow=block;endFill=1;"/>
+
+        <!-- ZExtA -> MUX_A16 -->
+        <mxCell id="e_zext_muxA" edge="1" parent="1" source="zextA" target="muxA16" style="endArrow=block;endFill=1;"/>
+        <!-- RegA2 -> MUX_A16 -->
+        <mxCell id="e_regA2_muxA" edge="1" parent="1" source="regA2" target="muxA16" style="endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="560" y="278"/></Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- MUXes -> Multiplier -->
+        <mxCell id="e_muxA_mul" edge="1" parent="1" source="muxA16" target="mul" value="A16" style="endArrow=block;endFill=1;"/>
+        <mxCell id="e_muxB_mul" edge="1" parent="1" source="muxB8" target="mul" value="B8" style="endArrow=block;endFill=1;"/>
+
+        <!-- Multiplier output to RegAB/RegA3/RegA2 note -->
+        <mxCell id="e_mul_regAB" edge="1" parent="1" source="mul" target="regAB" value="m_Y (ld_AB)" style="endArrow=block;endFill=1;"/>
+        <mxCell id="e_mul_regA3" edge="1" parent="1" source="mul" target="regA3" value="m_Y (ld_A3)" style="endArrow=block;endFill=1;"/>
+        <mxCell id="e_mul_regA2" edge="1" parent="1" source="mul" target="regA2" value="m_Y[15:0] (ld_A2)" style="dashed=1;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="840" y="278"/></Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ADD_OUT connections -->
+        <mxCell id="e_regAB_add" edge="1" parent="1" source="regAB" target="add_out" style="endArrow=block;endFill=1;"/>
+        <mxCell id="e_regA3_add" edge="1" parent="1" source="regA3" target="add_out" style="endArrow=block;endFill=1;"/>
+        <mxCell id="e_add_regY" edge="1" parent="1" source="add_out" target="regY" style="endArrow=block;endFill=1;"/>
+        <mxCell id="e_regY_yout" edge="1" parent="1" source="regY" target="y_out" style="endArrow=block;endFill=1;"/>
+
+        <!-- FSM control lines (labels only) -->
+        <mxCell id="e_start_fsm" edge="1" parent="1" source="start_in" target="fsm" value="start" style="endArrow=block;endFill=1;dashed=1;strokeColor=#d79b00"/>
+        <mxCell id="e_fsm_selA" edge="1" parent="1" source="fsm" target="muxA16" value="selA16" style="endArrow=block;endFill=1;dashed=1;strokeColor=#d79b00"/>
+        <mxCell id="e_fsm_selB" edge="1" parent="1" source="fsm" target="muxB8" value="selB8" style="endArrow=block;endFill=1;dashed=1;strokeColor=#d79b00"/>
+        <mxCell id="e_fsm_mul" edge="1" parent="1" source="fsm" target="mul" value="start_mul" style="endArrow=block;endFill=1;dashed=1;strokeColor=#d79b00"/>
+        <mxCell id="e_mul_done_fsm" edge="1" parent="1" source="mul" target="fsm" value="mul_done" style="endArrow=open;endFill=0;dashed=1;strokeColor=#9673a6"/>
+        <mxCell id="e_fsm_ldAB" edge="1" parent="1" source="fsm" target="regAB" value="ld_AB" style="endArrow=block;endFill=1;dashed=1;strokeColor=#d79b00"/>
+        <mxCell id="e_fsm_ldA2" edge="1" parent="1" source="fsm" target="regA2" value="ld_A2" style="endArrow=block;endFill=1;dashed=1;strokeColor=#d79b00"/>
+        <mxCell id="e_fsm_ldA3" edge="1" parent="1" source="fsm" target="regA3" value="ld_A3" style="endArrow=block;endFill=1;dashed=1;strokeColor=#d79b00"/>
+        <mxCell id="e_fsm_ldY" edge="1" parent="1" source="fsm" target="regY" value="ld_Y / valid" style="endArrow=block;endFill=1;dashed=1;strokeColor=#d79b00"/>
+        <mxCell id="e_fsm_busy" edge="1" parent="1" source="fsm" target="busy_out" value="busy" style="endArrow=block;endFill=1;dashed=1;strokeColor=#d79b00"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

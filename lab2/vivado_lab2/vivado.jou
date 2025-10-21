@@ -1,0 +1,115 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Oct 21 12:34:50 2025
+# Process ID: 16924
+# Current directory: C:/Users/gwert/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13904
+# Log file: C:/Users/gwert/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/gwert/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+source func6_tb.tcl
+close_sim
+launch_simulation
+source func6_tb.tcl
+close_sim
+launch_simulation
+source func6_tb.tcl
+close_sim
+launch_simulation
+source func6_tb.tcl
+close_sim
+launch_simulation
+source func6_tb.tcl
+synth_design -rtl -name rtl_1
+update_compile_order -fileset sources_1
+refresh_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+close_sim
+launch_simulation
+source tb_ab_plus_a3.tcl
+close_sim
+launch_simulation
+source tb_ab_plus_a3.tcl
+close_sim
+launch_simulation
+source tb_ab_plus_a3.tcl
+close_sim
+launch_simulation
+close_design
+close_project
+open_project C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_ab_plus_a3.tcl
+close_sim
+launch_simulation
+source tb_ab_plus_a3.tcl
+close_sim
+launch_simulation
+source tb_ab_plus_a3.tcl
+launch_simulation -type behavioral
+close_sim
+launch_simulation -type behavioral
+source tb_ab_plus_a3.tcl
+restart
+run -all
+close_sim
+launch_simulation
+close_project
+open_project C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.xpr
+update_compile_order -fileset sources_1
+run -all
+launch_simulation
+launch_simulation
+source tb_ab_plus_a3.tcl
+close_sim
+launch_simulation
+source tb_ab_plus_a3.tcl
+restart
+run -all
+close_sim
+launch_simulation
+close_project
+open_project C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+source func_tb.tcl
+restart
+run -all
+launch_simulation -type behavioral
+close_sim
+launch_simulation -type behavioral
+source func_tb.tcl
+restart
+run -all
+add_bp {C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v} 22
+remove_bps -file {C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v} -line 22
+add_bp {C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v} 22
+remove_bps -file {C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v} -line 22
+close_sim 
+launch_simulation -type behavioral
+source func_tb.tcl
+restart
+run -all
+synth_design -rtl -name rtl_1
+run -all
+launch_simulation
+close_sim
+launch_simulation
+source func_tb.tcl
+run --all
+run -all
+close_sim
+archive_project C:/Users/gwert/_itmo/lab2/vivado_lab2.xpr.zip -temp_dir C:/Users/gwert/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16924-awesoma-win -force -exclude_run_results -include_local_ip_cache
