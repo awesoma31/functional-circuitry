@@ -1,0 +1,1564 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Oct 21 12:34:50 2025
+# Process ID: 16924
+# Current directory: C:/Users/gwert/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13904
+# Log file: C:/Users/gwert/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/gwert/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func6_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func6_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func6
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func6_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func6_tb_behav xil_defaultlib.func6_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func6_tb_behav xil_defaultlib.func6_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module func6 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module mult16x8 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mult16x8
+Compiling module xil_defaultlib.func6
+Compiling module xil_defaultlib.func6_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot func6_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "func6_tb_behav -key {Behavioral:sim_1:Functional:func6_tb} -tclbatch {func6_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source func6_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test start
+Small: a=3 b=4 y=12 (exp 39)
+Max:   a=255 b=255 y=67320 (exp 16646400)
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 739.766 ; gain = 8.480
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'func6_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 739.766 ; gain = 8.480
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func6_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func6_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func6
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func6_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func6_tb_behav xil_defaultlib.func6_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func6_tb_behav xil_defaultlib.func6_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module func6 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module mult16x8 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mult16x8
+Compiling module xil_defaultlib.func6
+Compiling module xil_defaultlib.func6_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot func6_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "func6_tb_behav -key {Behavioral:sim_1:Functional:func6_tb} -tclbatch {func6_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source func6_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test start
+Small: a=3 b=4 y=12 (exp 39)
+Max:   a=255 b=255 y=67320 (exp 16646400)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'func6_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 748.777 ; gain = 0.797
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func6_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func6_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func6
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func6_tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 752.824 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '11' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func6_tb_behav xil_defaultlib.func6_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func6_tb_behav xil_defaultlib.func6_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module func6 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module mult16x8 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mult16x8
+Compiling module xil_defaultlib.func6
+Compiling module xil_defaultlib.func6_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot func6_tb_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/xsim.dir/func6_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 21 12:41:38 2025...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 752.824 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "func6_tb_behav -key {Behavioral:sim_1:Functional:func6_tb} -tclbatch {func6_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source func6_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test start
+Small: a=3 b=4 y=12 (exp 39)
+Max:   a=255 b=255 y=33528 (exp 16646400)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'func6_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 752.824 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func6_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func6_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func6
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func6_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func6_tb_behav xil_defaultlib.func6_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func6_tb_behav xil_defaultlib.func6_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module func6 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module mult16x8 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mult16x8
+Compiling module xil_defaultlib.func6
+Compiling module xil_defaultlib.func6_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot func6_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "func6_tb_behav -key {Behavioral:sim_1:Functional:func6_tb} -tclbatch {func6_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source func6_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test start
+Small: a=3 b=4 y=12 (exp 39)
+Max:   a=255 b=255 y=67320 (exp 16646400)
+$finish called at time : 885 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 30
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'func6_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 771.547 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func6_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func6_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func6
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func6_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func6_tb_behav xil_defaultlib.func6_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func6_tb_behav xil_defaultlib.func6_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module func6 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module mult16x8 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mult16x8
+Compiling module xil_defaultlib.func6
+Compiling module xil_defaultlib.func6_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot func6_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "func6_tb_behav -key {Behavioral:sim_1:Functional:func6_tb} -tclbatch {func6_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source func6_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test start
+Small: a=3 b=4 y=12 (exp 39)
+Max:   a=255 b=255 y=67320 (exp 16646400)
+$finish called at time : 945 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 30
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'func6_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 771.547 ; gain = 0.000
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: func6
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1180.508 ; gain = 176.555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'func6' [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:1]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter AB_RUN bound to: 1 - type: integer 
+	Parameter AA_RUN bound to: 2 - type: integer 
+	Parameter AAA_RUN bound to: 3 - type: integer 
+	Parameter SUM bound to: 4 - type: integer 
+	Parameter DONE bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mult16x8' [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mult16x8' (1#1) [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'func6' (2#1) [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1244.465 ; gain = 240.512
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1244.465 ; gain = 240.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1244.465 ; gain = 240.512
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1356.434 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1385.664 ; gain = 381.711
+9 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 1385.664 ; gain = 614.117
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1392.297 ; gain = 0.973
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'func6' [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:1]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter AB_RUN bound to: 1 - type: integer 
+	Parameter AA_RUN bound to: 2 - type: integer 
+	Parameter AAA_RUN bound to: 3 - type: integer 
+	Parameter SUM bound to: 4 - type: integer 
+	Parameter DONE bound to: 5 - type: integer 
+ERROR: [Synth 8-439] module 'mult16x8' not found [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:14]
+ERROR: [Synth 8-6156] failed synthesizing module 'func6' [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1429.223 ; gain = 37.898
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ab_plus_a3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seq_mult_16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ab_plus_a3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module ab_plus_a3 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module seq_mult_16x8_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seq_mult_16x8_default
+Compiling module xil_defaultlib.ab_plus_a3
+Compiling module xil_defaultlib.tb_ab_plus_a3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ab_plus_a3_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/xsim.dir/tb_ab_plus_a3_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 21 13:05:20 2025...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ab_plus_a3_behav -key {Behavioral:sim_1:Functional:tb_ab_plus_a3} -tclbatch {tb_ab_plus_a3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_ab_plus_a3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  got=459008 (0x70100)  exp=16646400 (0xfe0100)
+? ??? ????? ????????.
+$finish called at time : 785 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 72
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ab_plus_a3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1429.223 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ab_plus_a3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seq_mult_16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ab_plus_a3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module ab_plus_a3 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module seq_mult_16x8_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seq_mult_16x8_default
+Compiling module xil_defaultlib.ab_plus_a3
+Compiling module xil_defaultlib.tb_ab_plus_a3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ab_plus_a3_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ab_plus_a3_behav -key {Behavioral:sim_1:Functional:tb_ab_plus_a3} -tclbatch {tb_ab_plus_a3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_ab_plus_a3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  got=459008 (0x70100)  exp=16646400 (0xfe0100)
+$finish called at time : 785 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 71
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ab_plus_a3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ab_plus_a3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seq_mult_16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ab_plus_a3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module ab_plus_a3 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module seq_mult_16x8_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seq_mult_16x8_default
+Compiling module xil_defaultlib.ab_plus_a3
+Compiling module xil_defaultlib.tb_ab_plus_a3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ab_plus_a3_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ab_plus_a3_behav -key {Behavioral:sim_1:Functional:tb_ab_plus_a3} -tclbatch {tb_ab_plus_a3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_ab_plus_a3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+$finish called at time : 785 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 71
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ab_plus_a3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1434.230 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ab_plus_a3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seq_mult_16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ab_plus_a3
+ERROR: [VRFC 10-4982] syntax error near 'end' [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v:82]
+ERROR: [VRFC 10-2790] Verilog 2000 keyword end used in incorrect context [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v:82]
+ERROR: [VRFC 10-2865] module 'tb_ab_plus_a3' ignored due to previous errors [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_design
+close_project
+INFO: [filemgmt 56-326] User Interrupt. Could not getCurrentGraph()
+open_project C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ab_plus_a3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seq_mult_16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ab_plus_a3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module ab_plus_a3 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module seq_mult_16x8_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seq_mult_16x8_default
+Compiling module xil_defaultlib.ab_plus_a3
+Compiling module xil_defaultlib.tb_ab_plus_a3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ab_plus_a3_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ab_plus_a3_behav -key {Behavioral:sim_1:Functional:tb_ab_plus_a3} -tclbatch {tb_ab_plus_a3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_ab_plus_a3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ab_plus_a3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.141 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ab_plus_a3_behav -key {Behavioral:sim_1:Functional:tb_ab_plus_a3} -tclbatch {tb_ab_plus_a3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_ab_plus_a3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ab_plus_a3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ab_plus_a3_behav -key {Behavioral:sim_1:Functional:tb_ab_plus_a3} -tclbatch {tb_ab_plus_a3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_ab_plus_a3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ab_plus_a3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1445.141 ; gain = 0.000
+launch_simulation -type behavioral
+ERROR: [Vivado 12-1501] Simulator for snapshot 'Behavioral:sim_1:Functional:tb_ab_plus_a3' is already running. To launch simulation, change the snapshot name in the simulation fileset settings or close the current simulation.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -type behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ab_plus_a3_behav -key {Behavioral:sim_1:Functional:tb_ab_plus_a3} -tclbatch {tb_ab_plus_a3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_ab_plus_a3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ab_plus_a3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run -all
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+? T0: a=0 b=0  y=0 (0x0) OK
+? T1: a=1 b=0  y=1 (0x1) OK
+? T2: a=0 b=1  y=0 (0x0) OK
+? T3: a=7 b=5  y=378 (0x17a) OK
+? T4: a=10 b=10  y=1100 (0x44c) OK
+? T5: a=15 b=2  y=3405 (0xd4d) OK
+? T6: a=37 b=19  y=51356 (0xc89c) OK
+? T7: a=128 b=1  y=2097280 (0x200080) OK
+? T8: a=200 b=53  y=8010600 (0x7a3b68) OK
+? T9: a=255 b=0  y=16581375 (0xfd02ff) OK
+$finish called at time : 4485 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 79
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ab_plus_a3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seq_mult_16x8
+ERROR: [VRFC 10-4982] syntax error near '<=' [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v:46]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v:43]
+ERROR: [VRFC 10-2865] module 'seq_mult_16x8' ignored due to previous errors [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v:1]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_project
+open_project C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+run -all
+ERROR: [Simulator 45-6] No active Vivado Simulator simulation.  To use this command you must first start a simulation using Vivado Simulator.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ab_plus_a3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seq_mult_16x8
+ERROR: [VRFC 10-4982] syntax error near '<=' [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v:46]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v:43]
+ERROR: [VRFC 10-2865] module 'seq_mult_16x8' ignored due to previous errors [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v:1]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ab_plus_a3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seq_mult_16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ab_plus_a3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module ab_plus_a3 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module seq_mult_16x8_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seq_mult_16x8_default
+Compiling module xil_defaultlib.ab_plus_a3
+Compiling module xil_defaultlib.tb_ab_plus_a3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ab_plus_a3_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ab_plus_a3_behav -key {Behavioral:sim_1:Functional:tb_ab_plus_a3} -tclbatch {tb_ab_plus_a3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_ab_plus_a3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ab_plus_a3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.141 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ab_plus_a3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ab_plus_a3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ab_plus_a3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seq_mult_16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ab_plus_a3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ab_plus_a3_behav xil_defaultlib.tb_ab_plus_a3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module ab_plus_a3 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module seq_mult_16x8_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seq_mult_16x8_default
+Compiling module xil_defaultlib.ab_plus_a3
+Compiling module xil_defaultlib.tb_ab_plus_a3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ab_plus_a3_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ab_plus_a3_behav -key {Behavioral:sim_1:Functional:tb_ab_plus_a3} -tclbatch {tb_ab_plus_a3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_ab_plus_a3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ab_plus_a3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run -all
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+? T0: a=0 b=0  y=0 (0x0) OK
+? T1: a=1 b=0  y=1 (0x1) OK
+? T2: a=0 b=1  y=0 (0x0) OK
+? T3: a=7 b=5  y=378 (0x17a) OK
+? T4: a=10 b=10  y=1100 (0x44c) OK
+? T5: a=15 b=2  y=3405 (0xd4d) OK
+? T6: a=37 b=19  y=51356 (0xc89c) OK
+? T7: a=128 b=1  y=2097280 (0x200080) OK
+? T8: a=200 b=53  y=8010600 (0x7a3b68) OK
+? T9: a=255 b=0  y=16581375 (0xfd02ff) OK
+$finish called at time : 4485 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 69
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <func> not found while processing module instance <dut> [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v:14]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_project
+open_project C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module func doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module mult16x8_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mult16x8_default
+Compiling module xil_defaultlib.func
+Compiling module xil_defaultlib.func_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot func_tb_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim/xsim.dir/func_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 21 13:37:48 2025...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "func_tb_behav -key {Behavioral:sim_1:Functional:func_tb} -tclbatch {func_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source func_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'func_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1445.141 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run -all
+? SMALL: a=3 b=4  y=39 (0x27) OK
+? MAX: a=255 b=255  y=16646400 (0xfe0100) OK
+? T0: a=0 b=0  y=0 (0x0) OK
+? T1: a=1 b=0  y=1 (0x1) OK
+? T2: a=0 b=1  y=0 (0x0) OK
+? T3: a=7 b=5  y=378 (0x17a) OK
+? T4: a=10 b=10  y=1100 (0x44c) OK
+? T5: a=15 b=2  y=3405 (0xd4d) OK
+? T6: a=37 b=19  y=51356 (0xc89c) OK
+? T7: a=128 b=1  y=2097280 (0x200080) OK
+? T8: a=200 b=53  y=8010600 (0x7a3b68) OK
+? T9: a=255 b=0  y=16581375 (0xfd02ff) OK
+$finish called at time : 4485 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 68
+launch_simulation -type behavioral
+ERROR: [Vivado 12-1501] Simulator for snapshot 'Behavioral:sim_1:Functional:func_tb' is already running. To launch simulation, change the snapshot name in the simulation fileset settings or close the current simulation.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -type behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module func doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module mult16x8_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mult16x8_default
+Compiling module xil_defaultlib.func
+Compiling module xil_defaultlib.func_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot func_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "func_tb_behav -key {Behavioral:sim_1:Functional:func_tb} -tclbatch {func_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source func_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+? SMALL: y=39  LAT = 33 cycles  (~330 ns)
+? MAX: y=16646400  LAT = 33 cycles  (~330 ns)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'func_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.141 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run -all
+? SMALL: y=39  LAT = 33 cycles  (~330 ns)
+? MAX: y=16646400  LAT = 33 cycles  (~330 ns)
+? T0: y=0  LAT = 33 cycles  (~330 ns)
+? T1: y=1  LAT = 33 cycles  (~330 ns)
+? T2: y=0  LAT = 33 cycles  (~330 ns)
+? T3: y=378  LAT = 33 cycles  (~330 ns)
+? T4: y=1100  LAT = 33 cycles  (~330 ns)
+? T5: y=3405  LAT = 33 cycles  (~330 ns)
+? T6: y=51356  LAT = 33 cycles  (~330 ns)
+? T7: y=2097280  LAT = 33 cycles  (~330 ns)
+? T8: y=8010600  LAT = 33 cycles  (~330 ns)
+? T9: y=16581375  LAT = 33 cycles  (~330 ns)
+$finish called at time : 4245 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 81
+add_bp {C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v} 22
+remove_bps -file {C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v} -line 22
+add_bp {C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v} 22
+remove_bps -file {C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v} -line 22
+close_sim 
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -type behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult16x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v" Line 1. Module func doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v" Line 1. Module mult16x8_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mult16x8_default
+Compiling module xil_defaultlib.func
+Compiling module xil_defaultlib.func_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot func_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "func_tb_behav -key {Behavioral:sim_1:Functional:func_tb} -tclbatch {func_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source func_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+[OK] ? SMALL: y=39  LAT = 33 cycles  (~330 ns)
+[OK] ? MAX: y=16646400  LAT = 33 cycles  (~330 ns)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'func_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.141 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run -all
+[OK] ? SMALL: y=39  LAT = 33 cycles  (~330 ns)
+[OK] ? MAX: y=16646400  LAT = 33 cycles  (~330 ns)
+[OK] ? T0: y=0  LAT = 33 cycles  (~330 ns)
+[OK] ? T1: y=1  LAT = 33 cycles  (~330 ns)
+[OK] ? T2: y=0  LAT = 33 cycles  (~330 ns)
+[OK] ? T3: y=378  LAT = 33 cycles  (~330 ns)
+[OK] ? T4: y=1100  LAT = 33 cycles  (~330 ns)
+[OK] ? T5: y=3405  LAT = 33 cycles  (~330 ns)
+[OK] ? T6: y=51356  LAT = 33 cycles  (~330 ns)
+[OK] ? T7: y=2097280  LAT = 33 cycles  (~330 ns)
+[OK] ? T8: y=8010600  LAT = 33 cycles  (~330 ns)
+[OK] ? T9: y=16581375  LAT = 33 cycles  (~330 ns)
+$finish called at time : 4245 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 77
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: func
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1445.141 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'func' [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:1]
+	Parameter S_IDLE bound to: 3'b000 
+	Parameter S_AB bound to: 3'b001 
+	Parameter S_A2 bound to: 3'b010 
+	Parameter S_A3 bound to: 3'b011 
+	Parameter S_ADD bound to: 3'b100 
+	Parameter S_DONE bound to: 3'b101 
+INFO: [Synth 8-6157] synthesizing module 'mult16x8' [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v:1]
+	Parameter WA bound to: 16 - type: integer 
+	Parameter WB bound to: 8 - type: integer 
+	Parameter WOUT bound to: 24 - type: integer 
+	Parameter IDLE bound to: 1'b0 
+	Parameter WORK bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'mult16x8' (1#1) [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/mult.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:40]
+WARNING: [Synth 8-6014] Unused sequential element b_r_reg was removed.  [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:36]
+WARNING: [Synth 8-6014] Unused sequential element a2_16_reg was removed.  [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'func' (2#1) [C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sources_1/new/func.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1445.141 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1445.141 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1445.141 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1512.625 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1512.625 ; gain = 67.484
+8 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1512.625 ; gain = 67.484
+run -all
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1512.625 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+launch_simulation
+ERROR: [Vivado 12-1501] Simulator for snapshot 'Behavioral:sim_1:Functional:func_tb' is already running. To launch simulation, change the snapshot name in the simulation fileset settings or close the current simulation.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "func_tb_behav -key {Behavioral:sim_1:Functional:func_tb} -tclbatch {func_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source func_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+[OK] ? SMALL: y=39  LAT = 33 cycles  (~330 ns)
+[OK] ? MAX: y=16646400  LAT = 33 cycles  (~330 ns)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'func_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1512.625 ; gain = 0.000
+run --all
+ERROR: [Common 17-170] Unknown option '--all', please type 'run -help' for usage info.
+run -all
+[OK] ? T0: y=0  LAT = 33 cycles  (~330 ns)
+[OK] ? T1: y=1  LAT = 33 cycles  (~330 ns)
+[OK] ? T2: y=0  LAT = 33 cycles  (~330 ns)
+[OK] ? T3: y=378  LAT = 33 cycles  (~330 ns)
+[OK] ? T4: y=1100  LAT = 33 cycles  (~330 ns)
+[OK] ? T5: y=3405  LAT = 33 cycles  (~330 ns)
+[OK] ? T6: y=51356  LAT = 33 cycles  (~330 ns)
+[OK] ? T7: y=2097280  LAT = 33 cycles  (~330 ns)
+[OK] ? T8: y=8010600  LAT = 33 cycles  (~330 ns)
+[OK] ? T9: y=16581375  LAT = 33 cycles  (~330 ns)
+$finish called at time : 4245 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 77
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+archive_project C:/Users/gwert/_itmo/lab2/vivado_lab2.xpr.zip -temp_dir C:/Users/gwert/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16924-awesoma-win -force -exclude_run_results -include_local_ip_cache
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/gwert/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16924-awesoma-win' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/gwert/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16924-awesoma-win/PrjAr/_X_'.
+INFO: [Coretcl 2-135] resetting runs for excluding generated files from archive...
+INFO: [Coretcl 2-133] re-setting run 'synth_1'...
+INFO: [Coretcl 2-133] re-setting run 'impl_1'...
+INFO: [Coretcl 2-1209] Adding archive summary file to the project...
+INFO: [Coretcl 2-1214] Preparing project files for archive...
+INFO: [Coretcl 2-1210] Compressing project files and data...
+INFO: [Coretcl 2-1215] Project archived (C:/Users/gwert/_itmo/lab2/vivado_lab2.xpr.zip)
+INFO: [Coretcl 2-1216] To view the archive summary log in GUI, double click on 'Design Sources->Text->archive_project_summary.txt', or open this file from the archived project directory.
+close_design
+close_project
+open_project C:/Users/gwert/_itmo//lab2/vivado_lab2/vivado_lab2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'func_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj func_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+"xelab -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dd6188de58194dbbb2960d8610b101ac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot func_tb_behav xil_defaultlib.func_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "func_tb_behav -key {Behavioral:sim_1:Functional:func_tb} -tclbatch {func_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source func_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+[OK] ? SMALL: y=39  LAT = 33 cycles  (~330 ns)
+[OK] ? MAX: y=16646400  LAT = 33 cycles  (~330 ns)
+xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1742.402 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'func_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1742.402 ; gain = 0.000
+update_compile_order -fileset sources_1
+run -all
+[OK] ? T0: y=0  LAT = 33 cycles  (~330 ns)
+[OK] ? T1: y=1  LAT = 33 cycles  (~330 ns)
+[OK] ? T2: y=0  LAT = 33 cycles  (~330 ns)
+[OK] ? T3: y=378  LAT = 33 cycles  (~330 ns)
+[OK] ? T4: y=1100  LAT = 33 cycles  (~330 ns)
+[OK] ? T5: y=3405  LAT = 33 cycles  (~330 ns)
+[OK] ? T6: y=51356  LAT = 33 cycles  (~330 ns)
+[OK] ? T7: y=2097280  LAT = 33 cycles  (~330 ns)
+[OK] ? T8: y=8010600  LAT = 33 cycles  (~330 ns)
+[OK] ? T9: y=16581375  LAT = 33 cycles  (~330 ns)
+$finish called at time : 4245 ns : File "C:/Users/gwert/_itmo/lab2/vivado_lab2/vivado_lab2.srcs/sim_1/new/func_tb.v" Line 77
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project C:/Users/gwert/_itmo/lab1/vivado_lab1/vivado_lab1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+archive_project C:/Users/gwert/_itmo/lab1/vivado_lab1.xpr.zip -temp_dir C:/Users/gwert/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16924-awesoma-win -force -exclude_run_results -include_local_ip_cache
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/gwert/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16924-awesoma-win' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/gwert/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16924-awesoma-win/PrjAr/_X_'.
+INFO: [Coretcl 2-135] resetting runs for excluding generated files from archive...
+INFO: [Coretcl 2-133] re-setting run 'synth_1'...
+INFO: [Coretcl 2-133] re-setting run 'impl_1'...

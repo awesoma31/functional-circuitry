@@ -1,6 +1,6 @@
 LTspice 24.1.9 for Windows
 Circuit: C:\Users\gwert\_itmo\схемотехника\lab1\nand2_test.net
-Start Time: Wed Oct 15 13:24:10 2025
+Start Time: Sat Oct 18 18:22:13 2025
 solver = Normal
 Maximum thread count: 12
 tnom = 27
@@ -10,7 +10,7 @@ WARNING: Node x1:n002 is floating.
 WARNING: Node x1:n001 is floating.
 
 Direct Newton iteration for .op point succeeded.
-Total elapsed time: 0.779 seconds.
+Total elapsed time: 0.445 seconds.
 
 Files loaded:
 C:\Users\gwert\_itmo\схемотехника\lab1\nand2_test.net
