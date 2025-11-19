@@ -1,0 +1,13 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/gwert/_itmo/fc_lab3/lab3/fec_saylinx_project_example-master {C:/Users/gwert/_itmo/fc_lab3/lab3/fec_saylinx_project_example-master/fec_saylinx_board_top.v}
+vlog -vlog01compat -work work +incdir+C:/Users/gwert/_itmo/fc_lab3/lab3/fec_saylinx_project_example-master {C:/Users/gwert/_itmo/fc_lab3/lab3/fec_saylinx_project_example-master/seg_display_ctrl.v}
+vlog -vlog01compat -work work +incdir+C:/Users/gwert/_itmo/fc_lab3/lab3/fec_saylinx_project_example-master {C:/Users/gwert/_itmo/fc_lab3/lab3/fec_saylinx_project_example-master/hex_to_7seg.v}
+vlog -vlog01compat -work work +incdir+C:/Users/gwert/_itmo/fc_lab3/lab3/fec_saylinx_project_example-master {C:/Users/gwert/_itmo/fc_lab3/lab3/fec_saylinx_project_example-master/mult.v}
+vlog -vlog01compat -work work +incdir+C:/Users/gwert/_itmo/fc_lab3/lab3/fec_saylinx_project_example-master {C:/Users/gwert/_itmo/fc_lab3/lab3/fec_saylinx_project_example-master/func.v}
+

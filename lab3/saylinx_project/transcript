@@ -1,0 +1,9 @@
+# vsim tb_func_simple 
+# Start time: 14:42:47 on Nov 17,2025
+# Loading work.tb_func_simple
+# Loading work.func
+# Loading work.mult16x8
+add wave -position insertpoint sim:/tb_func_simple/*
+# WARNING: No extended dataflow license exists
+# End time: 14:43:38 on Nov 17,2025, Elapsed time: 0:00:51
+# Errors: 0, Warnings: 0
